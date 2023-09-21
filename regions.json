@@ -6,9 +6,9 @@
         "Centros": 8
     },
     "Region1": {
-        "Comunidad": 40,
-        "Unidades primer nivel": 40,
-        "Unidades segundo nivel": 40,
-        "Centros": 40
+        "Comunidad": 1,
+        "Unidades primer nivel": 1,
+        "Unidades segundo nivel": 1,
+        "Centros": 1
     }
 }
