@@ -10,14 +10,14 @@ with open('regions.json', 'r') as json_file:
 # Now, 'data' contains the JSON data as a Python dictionary
 print(data)
 
-data = {"Region1": {'Comunidad': ['Alice', 'Bob', 'Charlie'],
-                    'Unidades primer nivel': [20, 30, 35],
-                    'Unidades segundo nivel': [0, 0, 0],
-                    'Centro / Servicios / Modulos/ Esp': [0, 0, 0]},
-        "Region2": {'Comunidad': ['Alice', 'Bob', 'Charlie'],
-                    'Unidades primer nivel': [20, 30, 35],
-                    'Unidades segundo nivel': [0, 0, 0],
-                    'Centro / Servicios / Modulos/ Esp': [0, 0, 0]}}
+# data = {"Region1": {'Comunidad': ['Alice', 'Bob', 'Charlie'],
+#                     'Unidades primer nivel': [20, 30, 35],
+#                     'Unidades segundo nivel': [0, 0, 0],
+#                     'Centro / Servicios / Modulos/ Esp': [0, 0, 0]},
+#         "Region2": {'Comunidad': ['Alice', 'Bob', 'Charlie'],
+#                     'Unidades primer nivel': [20, 30, 35],
+#                     'Unidades segundo nivel': [0, 0, 0],
+#                     'Centro / Servicios / Modulos/ Esp': [0, 0, 0]}}
 
 first_key = next(iter(data))
 print(first_key)
@@ -37,11 +37,11 @@ df1 = pd.DataFrame(data["Region1"])
 df2 = pd.DataFrame(data["Region2"])
 
 # Specify the numeric columns to sum
-columns_to_sum = ['Unidades primer nivel', 'Unidades segundo nivel', 'Centro / Servicios / Modulos/ Esp']
+columns_to_sum = ['Comunidad', 'Unidades primer nivel', 'Unidades segundo nivel', 'Centros']
 
 # Calculate row-wise sum for the numeric columns and add it as a new column
 df1['Total'] = df1[columns_to_sum].sum(axis=1)
-df2['Total'] = df1[columns_to_sum].sum(axis=1)
+df2['Total'] = df2[columns_to_sum].sum(axis=1)
 
 # Specify the Excel file name
 excel_file = 'example.xlsx'
@@ -54,7 +54,7 @@ gap = 1
 with pd.ExcelWriter(excel_file, engine='xlsxwriter') as writer:
     # Write the DataFrame to the Excel file starting at cell B2
     df1.to_excel(writer, sheet_name='Septiembre', index=False, startrow=initial_cords[0], startcol=initial_cords[1])
-    df1.to_excel(writer, sheet_name='Septiembre', index=False, startrow=initial_cords[0], startcol=initial_cords[1] + table_width + gap)
+    df2.to_excel(writer, sheet_name='Septiembre', index=False, startrow=initial_cords[0], startcol=initial_cords[1] + table_width + gap)
         # df1.to_excel(writer, sheet_name='Septiembre', index=False, )
     # Get the xlsxwriter workbook and worksheet objects
     workbook = writer.book

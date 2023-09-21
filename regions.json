@@ -1,14 +1,14 @@
 {
-    "Region2": {
-        "Comunidad": 8,
-        "Unidades primer nivel": 8,
-        "Unidades segundo nivel": 8,
-        "Centros": 8
-    },
-    "Region1": {
-        "Comunidad": 1,
-        "Unidades primer nivel": 1,
-        "Unidades segundo nivel": 1,
-        "Centros": 1
-    }
-}
+	"Region1": {
+    "Comunidad": [1],
+    "Unidades primer nivel": [1],
+    "Unidades segundo nivel": [1],
+    "Centros": [1]
+  },
+  "Region2": {
+    "Comunidad": [8],
+    "Unidades primer nivel": [8],
+    "Unidades segundo nivel": [8],
+    "Centros": [8]
+  }
+ }
