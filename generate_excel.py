@@ -8,7 +8,7 @@ with open('regions.json', 'r') as json_file:
     data = json.load(json_file)
 
 # Now, 'data' contains the JSON data as a Python dictionary
-print(data)
+#print(data)
 
 # data = {"Region1": {'Comunidad': ['Alice', 'Bob', 'Charlie'],
 #                     'Unidades primer nivel': [20, 30, 35],
