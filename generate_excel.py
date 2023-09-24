@@ -44,7 +44,7 @@ df1['Total'] = df1[columns_to_sum].sum(axis=1)
 df2['Total'] = df2[columns_to_sum].sum(axis=1)
 
 # Specify the Excel file name
-excel_file = 'example.xlsx'
+excel_file = 'output.xlsx'
 
 initial_cords = [1, 1]
 gap = 1

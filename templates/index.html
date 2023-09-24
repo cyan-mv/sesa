@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html>
-	<head>
-    <title>Run Script</title>
-	</head>
-	<body>
-    <h1>Press the button to run the script</h1>
-    <form method="POST" action="/run_script">
-      <input type="submit" value="Run Script">
-    </form>
-	</body>
-</html>
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+  <!-- Create a centered h1 --> 
+  <center>
+  <h2> Press the button to run the script </h2>
+  </center>
+  <form method="POST" action="/run_script">
+    <ul>
+      <li> Comunidad : </li>
+      <li><input type="text" name="field1" placeholder="Field 1"></li>
+      <li><input type="text" name="field2" placeholder="Field 2"></li>
+      <li><input type="text" name="field3" placeholder="Field 3"></li>
+      <li><input type="text" name="field4" placeholder="Field 4"></li>
+    </ul>
+    <input type="submit" value="Run Script" class="btn btn-secondary btn-lg">
+  </form>
+{% endblock %}

@@ -1,0 +1,20 @@
+/* Center all body */
+body {
+    text-align: center;
+}
+
+/* ul { */
+/*     list-style: none; */
+/*     padding: 0; */
+/* } */
+
+li {
+    display: inline-block; /* Display the <li> elements horizontally */
+    margin-right: 10px; /* Add some spacing between the elements if needed */
+}
+
+/* center all buttons */
+/* input { */
+/*     display: block !important; */
+/*     margin: 0 auto !important; */
+/* } */
