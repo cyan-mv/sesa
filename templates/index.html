@@ -5,14 +5,30 @@
   <center>
   <h2> Press the button to run the script </h2>
   </center>
-  <form method="POST" action="/run_script">
-    <ul>
+  <!-- Form to generate excel -->
+  <!-- <form method="POST" action="/run_script"> -->
+  <!-- <form action="/process_form" method="post"></form> -->
+  <form method="post">
+    <ul class="comunidad">
       <li> Comunidad : </li>
-      <li><input type="text" name="field1" placeholder="Field 1"></li>
-      <li><input type="text" name="field2" placeholder="Field 2"></li>
-      <li><input type="text" name="field3" placeholder="Field 3"></li>
-      <li><input type="text" name="field4" placeholder="Field 4"></li>
+      <li><input type="text" name="c_field1" placeholder="Field 1"></li>
+      <li><input type="text" name="c_field2" placeholder="Field 2"></li>
+      <li><input type="text" name="c_field3" placeholder="Field 3"></li>
+      <li><input type="text" name="c_field4" placeholder="Field 4"></li>
     </ul>
-    <input type="submit" value="Run Script" class="btn btn-secondary btn-lg">
+
+    <ul class="primer nivel">
+      <li> Primer nivel : </li>
+      <li><input type="text" name="pn_field1" placeholder="Field 1"></li>
+      <li><input type="text" name="pn_field2" placeholder="Field 2"></li>
+      <li><input type="text" name="pn_field3" placeholder="Field 3"></li>
+      <li><input type="text" name="pn_field4" placeholder="Field 4"></li>
+    </ul>
+    
+    <!-- <input type="submit" value="Run Script" class="btn btn-secondary btn-lg"> -->
+    <button type="submit"> Submit </button>
   </form>
+  {% if result %}
+        <p>You entered: {{ result }}</p>
+    {% endif %}
 {% endblock %}

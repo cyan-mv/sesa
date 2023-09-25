@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Input Field Example</title>
 </head>
 <body>
-    <h1> This is a test </h1>
+    <form method="POST">
+        <input type="text" name="field1" placeholder="Enter a value">
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+        <p>You entered: {{ result }}</p>
+    {% endif %}
 </body>
 </html>
-
